@@ -1,0 +1,11 @@
+img.login-image {
+    padding: 10px 0px;
+    height: 42px;
+    vertical-align: middle;
+}
+
+div.login-text {
+    font-size: 27px;
+    font-weight: bold;
+    vertical-align: middle;
+}

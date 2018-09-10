@@ -1,0 +1,33 @@
+span.card-subtitle {
+    font-size: 11px;
+}
+
+#caselog {
+    overflow-y: auto;
+    height: calc(100vh - 151px - 40px - 56px);
+}
+
+#caselog_input {
+    position: absolute;
+    width: calc(100% - 40px);
+    bottom: 0;
+    margin-bottom:  20px;
+}
+
+ul.card-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li > div.card-body {
+    padding: 10px;
+}
+
+#set-cc {
+    display: block;
+    width: inherit;
+}
+
+.link {
+    cursor: pointer;
+}

@@ -1,0 +1,75 @@
+.single-card-view {
+    margin-top: 24px;
+    height: calc(100vh - 155px);
+}
+
+.form {
+    display: none;
+}
+
+.form-control[disabled] {
+    background-color: white;
+}
+
+#search-form {
+    padding: 10px;
+    min-width: 300px;
+}
+
+.dropdown-menu .btn {
+    padding: 0.375rem 0.75rem;
+}
+
+#toast {
+    visibility: hidden;
+    min-width: 300px;
+    background-color: #333333ee;
+    box-shadow: 0 0 12px #999;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1500;
+    right: 30px;
+    top: 30px;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.3s, fadeOut 0.3s 1.7s;
+    animation: fadeIn 0.3s, fadeOut 0.3s 1.7s;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+div.modal-mobile-preview {
+    max-width: calc(314px + 2rem + 2px + 1px);
+}
+
+.modal-mobile-preview .modal-body {
+    height: calc(156px + 2rem);
+    overflow-y: scroll;
+}
+
+.modal-mobile-preview .modal-body > p {
+    width: 314px;
+}

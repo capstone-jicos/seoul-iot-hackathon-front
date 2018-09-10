@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Lumidiet Management Web Console">
+     <link rel="shortcut icon" href="../img/favicon.ico">
+
+  <title>Lumidiet Backoffice</title>
+
+  <!-- Icons -->
+  <link href="../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../node_modules/simple-line-icons/css/simple-line-icons.min.css" rel="stylesheet">
+
+  <!-- Main styles for this application -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link href='../css/pages/login.css' rel='stylesheet'>
+
+</head>
+
+<body class="app flex-row align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card-group">
+          <div class="card p-4">
+            <div class="card-body">
+              <div class='text-center mb-3'>
+                <div class='d-inline'><img src='../img/logo.png' class='login-image'></div>
+                <div class='d-inline login-text'>  관리자</div>
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="icon-user"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="사용자 ID" id='userid'>
+              </div>
+              <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="icon-lock"></i></span>
+                </div>
+                <input type="password" class="form-control" placeholder="비밀번호" id='access-token'>
+              </div>
+              <div class="row">
+                <div class='col-6'>
+                  <!-- TODO Signin Count를 표시해주는 것이 필요할 듯 -->
+                  <p id='login-message' class="text-muted">로그인이 필요합니다.</p>
+                </div>
+                <div class="col-6 text-right">
+                  <button type="button" class="btn btn-primary px-4" id='login'>로그인</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap and necessary plugins -->
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- Login Logic-->
+  <script src='../js/pages/login.js'></script>
+
+</body>
+</html>

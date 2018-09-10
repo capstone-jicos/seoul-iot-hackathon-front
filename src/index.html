@@ -1,0 +1,155 @@
+<!--
+ * CoreUI - Open Source Bootstrap Admin Template
+ * @version v1.0.10
+ * @link http://coreui.io
+ * Copyright (c) 2018 creativeLabs Łukasz Holeczek
+ * @license MIT
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Lumidiet Management Web Console">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Guardians of Belt</title>
+
+  <!-- Bootstrap Date Picker Extension -->
+  <link href='node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css' rel='stylesheet'>
+
+  <!-- Summernote Extension -->
+  <link href='node_modules/summernote/dist/summernote-bs4.css' rel='stylesheet'>
+
+  <!-- Icons -->
+  <link href="node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+  <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+  <!-- Main styles for this application -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href='css/doubleh.main.css' rel='stylesheet'>
+</head>
+
+<!-- BODY options, add following classes to body to change options
+
+// Header options
+1. '.header-fixed'					- Fixed Header
+
+// Brand options
+1. '.brand-minimized'       - Minimized brand (Only symbol)
+
+// Sidebar options
+1. '.sidebar-fixed'					- Fixed Sidebar
+2. '.sidebar-hidden'				- Hidden Sidebar
+3. '.sidebar-off-canvas'		- Off Canvas Sidebar
+4. '.sidebar-minimized'			- Minimized Sidebar (Only icons)
+5. '.sidebar-compact'			  - Compact Sidebar
+
+// Aside options
+1. '.aside-menu-fixed'			- Fixed Aside Menu
+2. '.aside-menu-hidden'			- Hidden Aside Menu
+3. '.aside-menu-off-canvas'	- Off Canvas Aside Menu
+
+// Breadcrumb options
+1. '.breadcrumb-fixed'			- Fixed Breadcrumb
+
+// Footer options
+1. '.footer-fixed'					- Fixed footer
+
+-->
+
+<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
+  <header class="app-header navbar">
+    <button class="navbar-toggler mobile-sidebar-toggler d-lg-none mr-auto" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/"></a>
+    <button class="navbar-toggler sidebar-toggler d-md-down-none mr-auto" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <ul class='nav navbar-nav d-md-down-none'>
+          <li id='button-logout' class='nav-item px-3'>
+              <a class='nav-link' href='#'><i class='fa fa-lock'></i> 로그아웃</a>
+          </li>
+      </ul>
+  </header>
+
+  <div class="app-body">
+    <div class="sidebar">
+      <nav class="sidebar-nav">
+        <ul class="nav">
+          <li class='nav-item'><a href='member/' class='nav-link'><i class='icon-people'></i> 회원 관리</a></li>
+          <li class='nav-item'><a href='help/' class='nav-link'><i class='icon-earphones-alt'></i> 고객센터</a></li>
+          <li class='nav-item nav-dropdown'>
+            <a href='#' class='nav-link nav-dropdown-toggle'><i class='fa fa-line-chart'></i> 사용통계</a>
+            <ul class='nav-dropdown-items'>
+              <li class='nav-item'><a href='#' class='nav-link'>로그인 사용자수 (2주)</a> </li>
+              <li class='nav-item'><a href='#' class='nav-link'>벨트사용시간</a> </li>
+              <li class='nav-item'><a href='#' class='nav-link'>연령별 사용횟수</a> </li>
+              <li class='nav-item'><a href='#' class='nav-link'>남녀누적가입자 (월별)</a> </li>
+              <li class='nav-item'><a href='#' class='nav-link'>성별/연령별 사용자</a> </li>
+              <li class='nav-item'><a href='#' class='nav-link'>사용자기초통계</a> </li>
+              <li class='nav-item'><a href='#' class='nav-link'>남녀누적 가입자 (주별)</a> </li>
+              <li class='nav-item'><a href='#' class='nav-link'>연간 페어링 수 (주단위)</a> </li>
+              <li class='nav-item'><a href='#' class='nav-link'>연간 페어링 수 (월단위)</a> </li>
+              <!-- -->
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+    </div>
+
+    <!-- Main content -->
+    <main class="main">
+      <div class="container-fluid">
+        <div id="ui-view"></div>
+      </div>
+      <!-- /.conainer-fluid -->
+    </main>
+    <aside class='aside-menu'>
+      <div class='tab-content'>
+      </div>
+    </aside>
+  </div>
+  <nav aria-label='page-navigation' id='pagination-form' class='form'>
+    <ul class='pagination justify-content-end'>
+      <li class='page-item' id='pagination-previous-form'>
+        <a class='page-link' href='#' aria-label='Previous'>
+          <span aria-hidden='true'>&laquo;</span>
+          <span class='sr-only'>Previous</span>
+        </a>
+      </li>
+      <li class='page-item' id='pagination-page-form'><a href='#' class='page-link'>1</a></li>
+      <li class='page-item' id='pagination-next-form'>
+        <a class='page-link' href='#' aria-label='Next'>
+          <span aria-hidden='true'>&raquo;</span>
+          <span class='sr-only'>Next</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <footer class="app-footer">
+    <span class="ml-auto">Powered by <a href="http://coreui.io">CoreUI</a></span>
+  </footer>
+  <div id='toast'>Test Position</div>
+
+  <!-- Bootstrap and necessary plugins -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/pace-progress/pace.min.js"></script>
+  <script src='node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js'></script>
+  <script src='node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ko.min.js'></script>
+  <script src='node_modules/summernote/dist/summernote-bs4.min.js'></script>
+  <script src='node_modules/chart.js/dist/Chart.min.js'></script>
+
+  <!-- CoreUI main scripts -->
+
+  <script src="js/app.js"></script>
+  <script src='js/doubleh.main.js'></script>
+
+</body>
+</html>

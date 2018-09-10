@@ -1,0 +1,97 @@
+<script>
+    loadJS([], 'js/views/help/index.js');
+</script>
+<div class='card single-card-view' >
+    <div class='card-body'>
+        <div class='row'>
+            <div class='col'>
+                <h3 class='card-title mb-3'>문의 목록</h3>
+            </div>
+            <div class='col'>
+                <div class="btn-group float-right" role="group" aria-label="Button group">
+                    <a class="btn dropdown-toggle" data-toggle='dropdown' aria-expanded='true'><i class="icon-magnifier"></i> 검색</a>
+                    <div id='search-form' class='dropdown-menu dropdown-menu-right'>
+                        <form class='form-horizontal' role='form'>
+                            <div class='form-row'>
+                                <div class='form-group col'>
+                                    <label for='search-userid'>사용자 ID</label>
+                                    <input type='text' id='search-userid' class='form-control search-input'>
+                                </div>
+                                <div class='form-group col'>
+                                    <label for='search-title'>제목</label>
+                                    <input type='text' id='search-title' class='form-control search-input'>
+                                </div>
+                            </div>
+                            <div class='form-group'>
+                                <label for='search-claim'>내용</label>
+                                <input type='text' id='search-claim' class='form-control search-input'>
+                            </div>
+                            <div class='form-row'>
+                                <div class='form-group col'>
+                                    <label for='search-crdate_s'>등록일</label>
+                                    <input type='text' id='search-crdate_s' class='form-control search-input date-picker' placeholder='시작일'>
+                                </div>
+                                <div class='form-group col'>
+                                    <label for='search-crdate_e'><br></label>
+                                    <input type='text' id='search-crdate_e' class='form-control search-input date-picker' placeholder='종료일'>
+                                </div>
+                            </div>
+                            <div class='form-row'>
+                                <div class='form-group col'>
+                                    <label for='search-replied'>답변여부</label>
+                                    <select id='search-replied' class='form-control search-option'>
+                                        <option selected style='display: none'></option>
+                                        <option value='true'>예</option>
+                                        <option value='false'>아니오</option>
+                                    </select>
+                                </div>
+                                <div class='form-group col'>
+                                    <label for='search-resolved'>처리여부</label>
+                                    <select id='search-resolved' class='form-control search-option'>
+                                        <option selected style='display: none'></option>
+                                        <option value='N'>신규</option>
+                                        <option value='I'>처리중</option>
+                                        <option value='Y'>해결</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type='button' class='btn btn-primary float-right' id='search-submit'>검색</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class='table table-hover'>
+            <thead>
+            <tr>
+                <th scope='col' class='text-center'>연번</th>
+                <th scope='col' class='text-center'>제목</th>
+                <th scope='col' class='text-center'>답변여부</th>
+                <th scope='col' class='text-center'>처리여부</th>
+                <th scope='col' class='text-center'>사용자 ID</th>
+                <th scope='col' class='text-center'>등록일</th>
+            </tr>
+            </thead>
+            <tbody id='table-content'>
+
+            </tbody>
+        </table>
+        <nav aria-label='page-navigation'>
+            <ul class='pagination justify-content-end' id='pagination'>
+            </ul>
+        </nav>
+        <table class='form'>
+            <tbody>
+            <tr class='data-row'>
+                <th scope='row' class='data-text callid'></th>
+                <td class='data-text title'></td>
+                <td class='data-text is-replied' style='text-align: center'></td>
+                <td class='data-text resolved' style='text-align: center'></td>
+                <td class='data-text userid' style='text-align: center'></td>
+                <td class='data-text recorded' style='text-align: center'></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

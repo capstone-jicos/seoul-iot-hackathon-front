@@ -1,0 +1,20 @@
+{
+  "name": "guardians-of-belt-front",
+  "version": "0.1.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "bootstrap-datepicker": "^1.8.0",
+    "gulp-git": "^2.7.0",
+    "gulp-ssh": "^0.7.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglify-es": "^1.0.4",
+    "summernote": "^0.8.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
