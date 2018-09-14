@@ -3,7 +3,7 @@
  * @param {{userid: *, access_code: *}} data    ID, 비밀번호를 포함한 Object
  */
 function performLogin(data) {
-    let URL = '';
+    let URL = 'http://localhost:8080' + '/api/login';
 
     /** 해당 주소로 로그인 수행 */
     fetch(URL,{
@@ -14,15 +14,13 @@ function performLogin(data) {
         method: 'POST',
         credentials: 'include'
     }).then(function (response) {
-        response.json().then(function (data) {
-            // TODO Backend에서 성공/실패 여부 확인할 수 있도록 형식 바꾸기
-            if(data != null) {
-                // Main Page로 Redirection
-                window.location = getParameterByName('redirect_url');
-            } else {
-                // TODO #login-message에 틀린 횟수 나타내기
-            }
-        });
+        if (response.status / 100 === 2) {
+            response.json().then(function (json) {
+                window.location = json.redirect_uri;
+            });
+        } else if (response.status === 401) {
+            document.getElementById('login-message').innerText = '로그인 실패';
+        }
     })
 }
 

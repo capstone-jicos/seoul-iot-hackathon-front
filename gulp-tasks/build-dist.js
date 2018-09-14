@@ -108,6 +108,14 @@ gulp.task('vendors', function(callback) {
     runSequence('vendors:css', 'vendors:js', 'copy:vendorsFonts', 'copy:vendorsFlags', 'replace:node_modules', 'replace:summernoteCSS', callback);
 });
 
+gulp.task('replace:url', function () {
+    return gulp.src([
+        paths.dist + 'js/app.main.js',
+    ], {base: './'})
+        .pipe(replace(/http:\/\/localhost:8080/g, ''))
+        .pipe(gulp.dest('./'));
+});
+
 gulp.task('clean:dist', function () {
     return del(paths.dist, {force: true});
 });
@@ -157,5 +165,5 @@ gulp.task('copy:vendors', function() {
 
 /** CoreUI Theme 의 기본 Build Task. 아래 Task 들은 이것에서 파생되었던 것임 */
 gulp.task('build:dist', function(callback) {
-    runSequence('clean:dist', 'copy:css', 'copy:img', 'copy:js', 'copy:views', 'copy:html', 'copy:vendors', 'vendors', callback);
+    runSequence('clean:dist', 'copy:css', 'copy:img', 'copy:js', 'copy:views', 'copy:html', 'copy:vendors', 'vendors', 'replace:url', callback);
 });

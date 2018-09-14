@@ -39,29 +39,8 @@ function getMemberSearchCondition() {
  *             예를 들어, 화면의 1페이지는 0으로 들어감 (Version 2 서버의 페이지 계산법 때문)
  */
 function getMemberList(page = 0) {
-    let data = getMemberSearchCondition();
-
-    if (page !== null) {
-        // [PHPStorm Inspection 무시용] doubleh.main.js 에서 이미 선언되어 사용 가능함
-        // noinspection JSUnresolvedVariable
-        currentPage = page;
-        data.append('page', page.toString());
-    }
-
-    fetchData(data, function (respData) {
-        const detailLink = 'member/detail.html?userid=';
-        composeList(respData['users'], detailLink, 'userid');
-
-        if (respData['page'] !== undefined) {
-            // noinspection JSUndeclaredVariable
-            pageGroup = respData['page']['total'];
-            // noinspection JSUnresolvedVariable
-            currentPage = parseInt(respData['page']['current'])  + 1;
-        }
-
-        if (currentPage % PAGE_NO_PER_GROUP === 1) {
-            setPagination(currentPage, getMemberList);
-        }
+    fetchData('/api', {method: 'GET'}, function (resp) {
+        console.log(resp);
     });
 }
 

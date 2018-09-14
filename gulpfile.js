@@ -9,9 +9,9 @@ var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
 
 gulp.paths = {
-  dist: 'dist/',                // TODO: Change to working directory on server
+  dist: '../guardians-of-belt/dist/public/',                // TODO: Change to working directory on server
   src: 'src/',
-  vendors: 'dist/vendors/'      // TODO: Change to vendor directory in working directory
+  vendors: '../guardians-of-belt/dist/public/vendors/'      // TODO: Change to vendor directory in working directory
 };
 
 var paths = gulp.paths;

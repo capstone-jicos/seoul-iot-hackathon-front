@@ -174,38 +174,25 @@ function unsetReadonly() {
 
 /**
  * @description Version 2 서버에 Request 보내는 Logic 중 공통부분들을 모아놓은 Wrapper
- * @param {FormData} data           - 서버에 전달할 Key-Value 형식의 Body
+ * @param Object data           - 서버에 전달할 Key-Value 형식의 Body
  * @param {function} callback       - 요청 성공시 수행할 Function
  */
-function fetchData(data, callback) {
+function fetchData(path, data, callback) {
     // Cross-Origin Resource Sharing Policy로 인해서 동일 Origin에서 사용되어야
-    let URL = '';
-    // URL = URL + '?XDEBUG_SESSION_START=lkay';
+    let URL = 'http://localhost:8080' + path;
 
     fetch(URL, {
-        body: data,
-        method: 'POST',
+        body: data.body,
+        method: data.method,
         credentials: 'include'
     }).then(function (response) {
-       response.json().then(function (data) {
-            let status = data.status;
-
-            /** 요청 성공시 지정한 Callback 함수 실행 */
-            if (status === 'success') {
-                callback(data.data);
-            } else {
-                /** 세션이 없거나 만료됐을 경우 로그인 페이지로 Redirect */
-                if (data.data === "Login First!.") {
-                    let currentPath = window.location.pathname;
-                    window.location = 'pages/login.html?redirect_url=' + currentPath;
-                    return false;
-                }
-
-                /** 기타 오류인 경우 Toast 메세지로 안내 & JS Console 에 에러 내용 표시 */
-                console.log(data.data);
-                triggerToast('오류가 발생했습니다. 개발자 도구의 콘솔을 확인하세요.');
-            }
-        });
+        if (response.status /= 2) {
+            response.json().then(function (data) {
+                callback(data);
+            });
+        } else if (response.status === 401) {
+            window.location= '/pages/login.html';
+        }
     });
 }
 
