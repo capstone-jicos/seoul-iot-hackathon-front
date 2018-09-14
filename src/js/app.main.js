@@ -186,7 +186,7 @@ function fetchData(path, data, callback) {
         method: data.method,
         credentials: 'include'
     }).then(function (response) {
-        if (response.status /= 2) {
+        if (response.status / 100 === 2) {
             response.json().then(function (data) {
                 callback(data);
             });
