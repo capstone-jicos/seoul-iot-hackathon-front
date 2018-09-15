@@ -111,6 +111,7 @@ gulp.task('vendors', function(callback) {
 gulp.task('replace:url', function () {
     return gulp.src([
         paths.dist + 'js/app.main.js',
+        paths.dist + 'js/pages/login.js'
     ], {base: './'})
         .pipe(replace(/http:\/\/localhost:8080/g, ''))
         .pipe(gulp.dest('./'));
