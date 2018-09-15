@@ -184,6 +184,7 @@ function fetchData(path, data, callback) {
     fetch(URL, {
         body: data.body,
         method: data.method,
+        headers: data.headers,
         credentials: 'include'
     }).then(function (response) {
         if (response.status / 100 === 2) {
