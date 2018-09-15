@@ -179,7 +179,7 @@ function unsetReadonly() {
  */
 function fetchData(path, data, callback) {
     // Cross-Origin Resource Sharing Policy로 인해서 동일 Origin에서 사용되어야
-    let URL = 'http://localhost:8080' + path;
+    let URL = 'http://985b087b.ngrok.io' + path;
 
     fetch(URL, {
         body: data.body,

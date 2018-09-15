@@ -1,0 +1,106 @@
+
+<script>
+    loadJS([], 'js/views/pos/pos_detail.js');
+</script>
+
+        
+    <div class='card single-card-view' >
+        <div class='card-body'>
+            <div class='row'>
+                <div class='col'>
+                    <h3 class='card-title mb-3'>버스 로그</h3>
+                </div>
+                <div class='col'>
+                    <div class="btn-group float-right" role="group" aria-label="Button group">
+                        <a class="btn dropdown-toggle" data-toggle='dropdown' aria-expanded='true'><i class="icon-magnifier"></i> 검색</a>
+                        <div id='search-form' class='dropdown-menu dropdown-menu-right'>
+                            <form class='form-horizontal' role='form'>
+                                <div class='form-row'>
+                                    <div class='form-group col'>
+                                        <label for='search-userid'>사용자 ID</label>
+                                        <input type='text' id='search-userid' class='form-control search-input'>
+                                    </div>
+                                    <div class='form-group col'>
+                                        <label for='search-name'>이름</label>
+                                        <input type='text' id='search-name' class='form-control search-input'>
+                                    </div>
+                                </div>
+                                <div class='form-row'>
+                                    <div class='form-group col-10'>
+                                        <label for='search-email'>이메일</label>
+                                        <input type='text' id='search-email' class='form-control search-input'>
+                                    </div>
+                                    <div class='form-group col-2'>
+                                        <label for='search-gender'>성별</label>
+                                        <select id='search-gender' class='form-control search-option'>
+                                            <option selected style='display: none;'></option>
+                                            <option value='m'>남</option>
+                                            <option value='f'>여</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class='form-row'>
+                                    <div class='form-group col'>
+                                        <label for='search-country'>국가</label>
+                                        <input type='text' id='search-country' class='form-control search-input' placeholder='ex. KO'>
+                                    </div>
+                                    <div class='form-group col'>
+                                        <label for='search-birth'>생년월일</label>
+                                        <input type='text' id='search-birth' class='form-control search-input date-picker'>
+                                    </div>
+                                </div>
+                                <button type='button' class='btn btn-primary float-right' id='search-submit'>검색</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class='table table-hover'>
+                
+                <tbody id='table-content'>
+                    <tr>
+                        <td colspan='4'><br><br>
+                            <div style="width: 100%; height: 550px; margin: 0 auto; border: 2px solid #a4b7c1; border-radius: 35px; float: left;">
+                                <div style="width: 100%; height: 40px;"></div>
+                                <div style="float:left; width: 80px">&nbsp;&nbsp;</div>                                
+                                <div style="float:left"><img src="../../img/driver.png" style="width:100px"></div>
+                                <div style="float:right; width: 15px">&nbsp;&nbsp;</div>                                
+                                <div style="float:right"><img src="../../img/exit.png" style="width: 50px;"></div>
+                                <div><img src="../../img/empty.png" width="500px"></div>
+                            
+                                <table width="100%" style="text-align: center">
+                                    <tr><td id="seat_1">1</td><td id="seat_2">2</td><td></td><td id="seat_3">3</td><td id="seat_4">4</td></tr>
+                                    <tr><td id="seat_5">5</td><td id="seat_6">6</td><td></td><td id="seat_7">7</td><td id="seat_8">8</td></tr>
+                                    <tr><td id="seat_9">9</td><td id="seat_10">10</td><td></td><td id="seat_11">11</td><td id="seat_12">12</td></tr>
+                                    <tr><td id="seat_13">13</td><td id="seat_14">14</td><td></td><td id="seat_15">15</td><td id="seat_16">16</td></tr>
+                                    <tr><td id="seat_17">17</td><td id="seat_18">18</td><td></td><td id="seat_19">19</td><td id="seat_20">20</td></tr>
+                                    <tr><td id="seat_21">21</td><td id="seat_22">22</td><td></td><td id="seat_23">23</td><td id="seat_24">24</td></tr>
+                                    <tr><td id="seat_25">25</td><td id="seat_26">26</td><td></td><td id="seat_27">27</td><td id="seat_28">28</td></tr>
+                                    <tr><td id="seat_29">29</td><td id="seat_30">30</td><td></td><td id="seat_31">31</td><td id="seat_32">32</td></tr>
+                                </table>
+                                                                                 
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <nav aria-label='page-navigation'>
+                <ul class='pagination justify-content-end' id='pagination'>
+                </ul>
+            </nav>
+            <table class='form'>
+                <tbody>
+                <tr class='data-row'>
+                    <th scope='row' class='data-text Index'></th>
+                    <td class='data-text ID'></td>
+                    <td class='data-text PW'></td>
+                    <td class='data-text recent-used' style='text-align: center'></td>
+                </tr>
+    
+                </tbody>
+            </table>
+    
+        </div>
+        <input type="button" onclick="lightOn(document.getElementById('txt'))">
+    </div>
+</div>

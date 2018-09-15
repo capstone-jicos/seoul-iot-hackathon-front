@@ -1,0 +1,73 @@
+
+<script>
+    loadJS([], 'js/views/bus/bus_detail.js');
+</script>
+
+        
+    <div class='card single-card-view' >
+        <div class='card-body'>
+            <div class='row'>
+                <div class='col'>
+                    <h3 class='card-title mb-3'>버스 로그</h3>
+                </div>
+                
+            </div>
+            <table class='table table-hover'>
+                <tbody id='table-content'>
+                    <tr>
+                        <td colspan='4'>
+                            <div style="width: 300px; height: 550px; margin: 0 auto; border: 2px solid #a4b7c1; border-radius: 35px; float: left;">
+                                <div style="width: 100%; height: 40px;"></div>
+                                <div style="float:left"><img src="../../img/driver.png" style="width:70px"></div>
+                                <div style="float:right"><img src="../../img/exit.png" style="width: 30px;"></div>
+                                <div><img src="../../img/empty.png" width="200px"></div>
+                            
+                                <table width="100%" style="text-align: center">
+                                    <tr><td id="seat_1">1</td><td id="seat_2">2</td><td></td><td id="seat_3">3</td><td id="seat_4">4</td></tr>
+                                    <tr><td id="seat_5">5</td><td id="seat_6">6</td><td></td><td id="seat_7">7</td><td id="seat_8">8</td></tr>
+                                    <tr><td id="seat_9">9</td><td id="seat_10">10</td><td></td><td id="seat_11">11</td><td id="seat_12">12</td></tr>
+                                    <tr><td id="seat_13">13</td><td id="seat_14">14</td><td></td><td id="seat_15">15</td><td id="seat_16">16</td></tr>
+                                    <tr><td id="seat_17">17</td><td id="seat_18">18</td><td></td><td id="seat_19">19</td><td id="seat_20">20</td></tr>
+                                    <tr><td id="seat_21">21</td><td id="seat_22">22</td><td></td><td id="seat_23">23</td><td id="seat_24">24</td></tr>
+                                    <tr><td id="seat_25">25</td><td id="seat_26">26</td><td></td><td id="seat_27">27</td><td id="seat_28">28</td></tr>
+                                    <tr><td id="seat_29">29</td><td id="seat_30">30</td><td></td>s<td id="seat_31">31</td><td id="seat_32">32</td></tr>
+                                </table>
+                                                                                 
+                            </div>
+
+                            <div style="width: 450px; height: 550px; margin: 0 auto; border: 2px solid #a4b7c1; float : right">
+                            <table width="100%" style="border: 1px solid #a4b7c1;">
+                                <thead>
+                                <tr style="text-align: center;">
+                                    <th>버스 번호</th>
+                                    <th>담당 운전자</th>
+                                    <th>착용률</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-content2" style="text-align: center">
+                                </tbody>
+                            </table>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <nav aria-label='page-navigation'>
+                <ul class='pagination justify-content-end' id='pagination'>
+                </ul>
+            </nav>
+            <table class='form'>
+                <tbody>
+                <tr class='data-row'>
+                    <th scope='row' class='data-text busNum'></th>
+                    <td class='data-text name'></td>
+                    <td class='data-text rate'></td>
+                </tr>
+    
+                </tbody>
+            </table>
+    
+        </div>
+
+    </div>
+</div>
