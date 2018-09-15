@@ -11,6 +11,7 @@ function getBusList() {
 
     fetchData('/api/bus', {method: 'GET'}, function (respData) {
         let keys = ['busIndex', 'busNum', 'name', 'rate'];
+        let url='bus/bus_detail.html?id=';
 
         if (respData['buses'].length !== 0) {
             let position = document.getElementById('table-content');
@@ -24,11 +25,21 @@ function getBusList() {
                     col.innerText = respData['buses'][i][keys[j]];
                     row.appendChild(col);
                 }
+                addClickListener(row, loadPage, url+respData['buses'][i]['busIndex']);
 
                 position.appendChild(row);
             }
         }
     })
+}
+
+function sendBusList() {
+    let list = document.forms['onGoingBus'];
+    var bus_num = list.getElementsByClassName('data-text busIndex')[0];
+}
+
+function post_to_url(path, params, method, enctype) {
+
 }
 
 /**
