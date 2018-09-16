@@ -9,55 +9,10 @@ function bus_detail(val){
 
     <div class='card single-card-view' >
         <div class='card-body'>
-            <div class='row'>
-                <div class='col'>
-                    <h3 class='card-title mb-3'>운행중인 버스 목록</h3>
-                </div>
-                <div class='col'>
-                    <div class="btn-group float-right" role="group" aria-label="Button group">
-                        <a class="btn dropdown-toggle" data-toggle='dropdown' aria-expanded='true'><i class="icon-magnifier"></i> 검색</a>
-                        <div id='search-form' class='dropdown-menu dropdown-menu-right'>
-                            <form class='form-horizontal' role='form'>
-                                <div class='form-row'>
-                                    <div class='form-group col'>
-                                        <label for='search-userid'>사용자 ID</label>
-                                        <input type='text' id='search-userid' class='form-control search-input'>
-                                    </div>
-                                    <div class='form-group col'>
-                                        <label for='search-name'>이름</label>
-                                        <input type='text' id='search-name' class='form-control search-input'>
-                                    </div>
-                                </div>
-                                <div class='form-row'>
-                                    <div class='form-group col-10'>
-                                        <label for='search-email'>이메일</label>
-                                        <input type='text' id='search-email' class='form-control search-input'>
-                                    </div>
-                                    <div class='form-group col-2'>
-                                        <label for='search-gender'>성별</label>
-                                        <select id='search-gender' class='form-control search-option'>
-                                            <option selected style='display: none;'></option>
-                                            <option value='m'>남</option>
-                                            <option value='f'>여</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class='form-row'>
-                                    <div class='form-group col'>
-                                        <label for='search-country'>국가</label>
-                                        <input type='text' id='search-country' class='form-control search-input' placeholder='ex. KO'>
-                                    </div>
-                                    <div class='form-group col'>
-                                        <label for='search-birth'>생년월일</label>
-                                        <input type='text' id='search-birth' class='form-control search-input date-picker'>
-                                    </div>
-                                </div>
-                                <button type='button' class='btn btn-primary float-right' id='search-submit'>검색</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+            <div class='col'>
+                <h3 class='card-title mb-3'>운행중인 버스 목록</h3>
             </div>
+
             <table class='table table-hover'>
                 <thead>
                     <tr>

@@ -53,6 +53,30 @@ function getSeatInfo() {
     })
 }
 
+function getStopDriving() {
+
+    fetchData('/api/bus/2', {method: 'GET'}, function (respData) {
+        let keys = ['seatNum', 'seated', 'buckled'];
+
+        if (respData === undefined) {
+            return false;
+        }
+        else {
+            var chk = false;
+            for (let i=0; i<32; i++) {
+                if (respData['seats'][i][keys[1]]==true){
+                    chk = true;
+                }
+            }
+            if (!chk) {
+                location.href("stop.html");
+            }else{
+                alert("승객이 아직 남아있습니다! 좌석을 확인하세요!");
+            }
+        }
+    })
+}
+
 function initBusPos() {
     if (intervalOn !== undefined) {
         clearInterval(intervalOn);
