@@ -12,9 +12,14 @@
             </div>
             <div class='col'>
                 <div class="btn-group float-right" role="group" aria-label="Button group">
+                    <button id='alert-belt' >벨트 착용 알림</button>
                     <button onclick="getStopDriving()">운행종료</button>
                 </div>
+                <audio id='media-alert' hidden>
+                    <source src='/media/alert.wav'>
+                </audio>
             </div>
+
             </div>
             <table class='table table-hover'>
                 

@@ -33,6 +33,11 @@ function lightOnGreen(val) {
 }
 
 function getSeatInfo() {
+    if (intervalOn !== undefined) {
+        clearInterval(intervalOn);
+        clearInterval(intervalOff);
+    }
+
     fetchData('/api/bus/2', {method: 'GET'}, function (respData) {
         let keys = ['seatNum', 'seated', 'buckled'];
 
@@ -77,14 +82,15 @@ function getStopDriving() {
     })
 }
 
+function playAudio() {
+    document.getElementById('media-alert').play();
+}
+
 function initBusPos() {
-    if (intervalOn !== undefined) {
-        clearInterval(intervalOn);
-        clearInterval(intervalOff);
-    }
+    addClickListener(document.getElementById('alert-belt'), playAudio, null);
     getSeatInfo();
 }   
 
 initBusPos();
 
-setInterval(initBusPos, 3000);
+setInterval(getSeatInfo, 3000);

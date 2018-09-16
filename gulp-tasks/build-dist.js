@@ -137,6 +137,11 @@ gulp.task('copy:js', function() {
         .pipe(gulp.dest(paths.dist + 'js'));
 });
 
+gulp.task('copy:media', function() {
+    return gulp.src(paths.src + 'media/**/*')
+        .pipe(gulp.dest(paths.dist + 'media'));
+});
+
 gulp.task('copy:views', function() {
     return gulp.src(paths.src + 'views/**/*')
         .pipe(gulp.dest(paths.dist + 'views'));
@@ -166,5 +171,5 @@ gulp.task('copy:vendors', function() {
 
 /** CoreUI Theme 의 기본 Build Task. 아래 Task 들은 이것에서 파생되었던 것임 */
 gulp.task('build:dist', function(callback) {
-    runSequence('clean:dist', 'copy:css', 'copy:img', 'copy:js', 'copy:views', 'copy:html', 'copy:vendors', 'vendors', 'replace:url', callback);
+    runSequence('clean:dist', 'copy:css', 'copy:img', 'copy:js', 'copy:media', 'copy:views', 'copy:html', 'copy:vendors', 'vendors', 'replace:url', callback);
 });
