@@ -114,6 +114,7 @@ gulp.task('replace:url', function () {
         paths.dist + 'js/pages/login.js'
     ], {base: './'})
         .pipe(replace(/http:\/\/localhost:8080/g, ''))
+        .pipe(replace(/http:\/\/985b087b.ngrok.io/g, ''))
         .pipe(gulp.dest('./'));
 });
 
