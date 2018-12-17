@@ -1,21 +1,27 @@
-# CoreUI Backoffice
+# 가디언즈 오브 벨트
 
-Version 2 Server로 넘어가면서 개편시도한 Backoffice입니다. [CoreUI](https://coreui.io/) 테마를 사용했으며, 이 중 [AJAX 버전](https://github.com/coreui/coreui-free-bootstrap-admin-template-ajax)을 사용했습니다. (jQuery, Bootstrap 4 기반)
+## 프로젝트 소개
 
-## Guideline
+안전띠 미착용 상태에서 차량 사고가 발생할 경우 상해 가능성이 18배가 높아진다고 한다. 또한, 밖으로 튕겨져 나갔을 때 사망 확률이 25배나 높아진다고 한다. 사람들은 사태의 심각성을 알면서도 불편하거나 귀찮다는 이유로 생명과도 직결되는 안전띠를 중요하게 생각하지 않는다. 이에 정부에서는 오는 9월부터 ‘전 차량, 전 좌석 안전띠 의무화’ 정책을 내세웠지만, 40석이 넘는 시외,고속버스의 경우 이를 일일이 검사한다는 것은 어렵다. 그래서 안전띠에 센서를 부착하여 탑승자 모두가 안전띠를 올바르게 착용하고 있는지 자동으로 감지하고자 한다. 더불어, 어린이 탑승차량에서 일어나는 문제들을 해결할 수 있다. 예를 들어, 버스의 백미러 사각지대로 인해 아이들이 교통사고를 당하거나, 차량 안에 방치되는 경우도 있었다. 만약 안전띠를 착용했는지 감지하는 센서가 있었다면, 학생들의 위치를 간접적으로 확인할 수 있었을 것이며, 이를 통해 인명피해를 줄일 수 있을 것이다.
 
-CoreUI Backoffice 유지보수를 위해 Guideline을 작성했습니다. 유지보수 전 한 번 확인해보시는 것을 권장합니다.
+버스 회사(혹은 기사)의 경우 안전띠 미착용 승객이 있다면, 과태료를 내야하지만 광역 버스의 경우 승하차지마다 그리고 고속도로를 지나는 동안 안전띠 미착용 승객을 관리하기 힘들다. 만약 이런 상태에서 교통사고가 발생할 경우 큰 인명피해로 이어지며, 그에 따른 보상은 버스 회사와 기사가가 책임져야 하고 보상해야하는 승객들이 많을 경우 이는 큰 금전적 손실로 이어질 수 있다. . 버스회사가 우리 서비스를 사용하면, 전좌석 안전띠 착용을 장려할 수 있어 유사시에도 인명 및 재정적 피해를 최소화할 수 있다. 더불어, 사측의 지속적 안내에도 불구하고 안전띠를 착용하지 않은 승객에 대한 책임을 분명히 할 수 있어, 사측의 사고에 대한 책임을 어느정도 경감할 수 있을 것이다.
 
-### Style Guideline
+## 기술스택
 
-각 기술적 요소(HTML, CSS, Javascript)에서 어떻게 구현이 되어있는지 기술했습니다. 각 구현에 대한 근본적인 원리 위주로 기술하였습니다. (Google Drive 링크로 권한 필요)
+- 임베디드 보드 ([Github](https://github.com/capstone-jicos/seoul-iot-hackathon))
+- 어플리케이션 서버 ([Github](https://github.com/capstone-jicos/seoul-iot-hackathon-server))
+- 데모용 웹페이지
+  - HTML / CSS / Javascript
+  - jQuery (일부)
+  - Core UI Admin Temaplte ([링크](https://github.com/coreui/coreui-free-bootstrap-admin-template-ajax))
 
-- Markdown 버전 : [링크](https://drive.google.com/drive/folders/12RXB1_jhjLx1yzfyShV_A2wvh3SwwXcl?usp=sharing) (폴더 전체를 다운받아야 이미지가 안 깨집니다.)
-- MS Word 버전 : [링크](https://drive.google.com/file/d/12VFHeRCaTevMC-yKuHB11u36BE0akbTJ/view?usp=sharing)
+## 웹 클라이언트 개요
 
-### Practical Guideline
+가디언즈 오브 벨트 서비스의 실제 사용 가능성을 보여주는 웹 페이지로서, 실제 버스회사, 혹은 버스 기사들이 기사용 단말기를 통해 승객들의 좌석벨트 착용 여부를 실시간으로 확인할 수 있다는 가능성을 모의로 보여줬다. 
 
-CoreUI Backoffice를 구성하는 핵심 기능들에 대해 직접 따라해보고 적용할 수 있는 예제 코드들 위주로 기술하였습니다. (Google Drive 링크로 권한 필요)
+## 데모 발표
 
-- Markdown 버전 : [링크](https://drive.google.com/drive/folders/11dDicWbii57LrOSDuDGiPNQb3QSjKrFg?usp=sharing) (폴더 전체를 다운받아야 이미지가 안 깨집니다.)
-- MS Workd 버전 : [링크](https://drive.google.com/file/d/12ao10-jxAygp9mLLOChNamnGxU72iDIb/view?usp=sharing)
+http://www.youtube.com/watch?v=CVrJXasqSlg&t=58m36s
+
+
+
